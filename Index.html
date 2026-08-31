@@ -1,0 +1,717 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PataNova | Todo para tu mascota</title>
+
+<meta name="description" content="Productos modernos para perros y gatos. Descubre accesorios, juguetes y mucho más en PataNova.">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head><body><!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="top-bar">
+        🚚 Envío a toda España · 🔒 Pago seguro · 🐾 Todo para tu mascota
+    </div>
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            <span>🐾</span> PataNova
+        </a>
+
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#perros">Perros</a>
+            <a href="#gatos">Gatos</a>
+            <a href="#productos">Productos</a>
+            <a href="#faq">Ayuda</a>
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="searchBtn" aria-label="Buscar">
+                🔍
+            </button>
+
+            <button class="cart-btn" id="openCart">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- BUSCADOR -->
+
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar productos..."
+        >
+
+        <button id="closeSearch">✕</button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                🐾 NUEVA COLECCIÓN
+            </span>
+
+            <h1>
+                Todo lo que tu
+                <span>mascota merece.</span>
+            </h1>
+
+            <p>
+                Descubre productos modernos, prácticos y divertidos
+                para hacer más feliz la vida de tu perro o gato.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#productos" class="btn btn-primary">
+                    Ver productos
+                </a>
+
+                <a href="#categorias" class="btn btn-secondary">
+                    Explorar categorías
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="hero-circle"></div>
+
+            <div class="hero-emoji hero-dog">🐶</div>
+            <div class="hero-emoji hero-cat">🐱</div>
+            <div class="floating-paw paw1">🐾</div>
+            <div class="floating-paw paw2">🐾</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BENEFICIOS ================= -->
+
+    <section class="benefits">
+
+        <div class="benefit">
+            <div class="benefit-icon">🚚</div>
+            <div>
+                <strong>Envío rápido</strong>
+                <p>Seguimiento de tu pedido</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">🔒</div>
+            <div>
+                <strong>Compra segura</strong>
+                <p>Pagos protegidos</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">🐾</div>
+            <div>
+                <strong>Para perros y gatos</strong>
+                <p>Productos seleccionados</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">💬</div>
+            <div>
+                <strong>Atención al cliente</strong>
+                <p>Estamos para ayudarte</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIAS ================= -->
+
+    <section class="section categories-section" id="categorias">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-tag">EXPLORA</span>
+                <h2>Encuentra lo mejor para ellos 🐾</h2>
+            </div>
+
+        </div>
+
+
+        <div class="categories-grid">
+
+            <button class="category-card dog-card" data-filter="perros">
+
+                <span class="category-emoji">🐶</span>
+
+                <div>
+                    <h3>Para Perros</h3>
+                    <p>Juguetes, accesorios y más</p>
+                </div>
+
+                <span class="arrow">→</span>
+
+            </button>
+
+
+            <button class="category-card cat-card" data-filter="gatos">
+
+                <span class="category-emoji">🐱</span>
+
+                <div>
+                    <h3>Para Gatos</h3>
+                    <p>Diversión y comodidad</p>
+                </div>
+
+                <span class="arrow">→</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FILTROS ================= -->
+
+    <section class="section" id="productos">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-tag">TIENDA</span>
+                <h2>Productos destacados</h2>
+            </div>
+
+        </div>
+
+
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                Todos
+            </button>
+
+            <button class="filter-btn" data-filter="perros">
+                🐶 Perros
+            </button>
+
+            <button class="filter-btn" data-filter="gatos">
+                🐱 Gatos
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTOS -->
+
+        <div class="products-grid" id="productsGrid">
+
+            <article class="product-card" data-category="perros">
+
+                <div class="product-image">
+                    🧸
+                    <span class="product-badge">Popular</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">PERROS</span>
+
+                    <h3>Juguete Interactivo</h3>
+
+                    <p>
+                        Diversión y entretenimiento para tu perro.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>€19.90</strong>
+
+                        <button
+                            class="add-cart"
+                            data-id="1"
+                            data-name="Juguete Interactivo"
+                            data-price="19.90"
+                            data-image="🧸"
+                        >
+                            Añadir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card" data-category="perros">
+
+                <div class="product-image">
+                    🦮
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">PERROS</span>
+
+                    <h3>Correa Moderna</h3>
+
+                    <p>
+                        Cómoda y práctica para los paseos diarios.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>€24.90</strong>
+
+                        <button
+                            class="add-cart"
+                            data-id="2"
+                            data-name="Correa Moderna"
+                            data-price="24.90"
+                            data-image="🦮"
+                        >
+                            Añadir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card" data-category="perros">
+
+                <div class="product-image">
+                    🥣
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">PERROS</span>
+
+                    <h3>Cuenco Portátil</h3>
+
+                    <p>
+                        Perfecto para paseos y viajes.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>€14.90</strong>
+
+                        <button
+                            class="add-cart"
+                            data-id="3"
+                            data-name="Cuenco Portátil"
+                            data-price="14.90"
+                            data-image="🥣"
+                        >
+                            Añadir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card" data-category="gatos">
+
+                <div class="product-image">
+                    🐭
+                    <span class="product-badge">Nuevo</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">GATOS</span>
+
+                    <h3>Juguete para Gatos</h3>
+
+                    <p>
+                        Diseñado para estimular el juego.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>€12.90</strong>
+
+                        <button
+                            class="add-cart"
+                            data-id="4"
+                            data-name="Juguete para Gatos"
+                            data-price="12.90"
+                            data-image="🐭"
+                        >
+                            Añadir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card" data-category="gatos">
+
+                <div class="product-image">
+                    🛏️
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">GATOS</span>
+
+                    <h3>Cama Confort</h3>
+
+                    <p>
+                        Un espacio cómodo para descansar.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>€29.90</strong>
+
+                        <button
+                            class="add-cart"
+                            data-id="5"
+                            data-name="Cama Confort"
+                            data-price="29.90"
+                            data-image="🛏️"
+                        >
+                            Añadir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card" data-category="gatos">
+
+                <div class="product-image">
+                    🪀
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">GATOS</span>
+
+                    <h3>Juguete Interactivo</h3>
+
+                    <p>
+                        Horas de entretenimiento para tu gato.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>€17.90</strong>
+
+                        <button
+                            class="add-cart"
+                            data-id="6"
+                            data-name="Juguete Interactivo para Gatos"
+                            data-price="17.90"
+                            data-image="🪀"
+                        >
+                            Añadir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BANNER ================= -->
+
+    <section class="promo">
+
+        <div>
+
+            <span>🐾 PATANOVA</span>
+
+            <h2>
+                Una vida más feliz empieza
+                con pequeños momentos.
+            </h2>
+
+            <a href="#productos" class="btn btn-light">
+                Descubrir productos
+            </a>
+
+        </div>
+
+        <div class="promo-pets">
+            🐶 🐱
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="section faq-section" id="faq">
+
+        <div class="section-header center">
+
+            <span class="section-tag">AYUDA</span>
+
+            <h2>Preguntas frecuentes</h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Cómo puedo seguir mi pedido?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Recibirás información de seguimiento cuando tu pedido sea enviado.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Cuánto tarda el envío?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    El plazo de entrega dependerá del producto y de la dirección de entrega.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Qué métodos de pago aceptan?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Los métodos de pago disponibles aparecerán durante el proceso de compra cuando la tienda esté conectada a un proveedor de pagos.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div>
+
+            <span>🐾 CLUB PATANOVA</span>
+
+            <h2>
+                Recibe novedades y ofertas especiales.
+            </h2>
+
+        </div>
+
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Tu correo electrónico"
+                required
+            >
+
+            <button type="submit">
+                Suscribirme
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h2>🐾 PataNova</h2>
+
+            <p>
+                Productos seleccionados para hacer más feliz
+                la vida de perros y gatos.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Tienda</h4>
+
+            <a href="#productos">Productos</a>
+            <a href="#categorias">Categorías</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Ayuda</h4>
+
+            <a href="#faq">Preguntas frecuentes</a>
+            <a href="#">Contacto</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Síguenos</h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 PataNova. Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CARRINHO ================= -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+
+<aside class="cart" id="cart">
+
+    <div class="cart-header">
+
+        <h2>Tu carrito 🛒</h2>
+
+        <button id="closeCart">
+            ✕
+        </button>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-items">
+
+        <div class="empty-cart">
+            🐾
+            <p>Tu carrito está vacío.</p>
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">€0.00</strong>
+
+        </div>
+
+
+        <button class="checkout-btn" id="checkoutBtn">
+
+            Ir al pago 🔒
+
+        </button>
+
+
+        <small>
+            El pago será conectado a un proveedor autorizado posteriormente.
+        </small>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+    Producto añadido al carrito 🐾
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
