@@ -1,4 +1,5 @@
 const cart = [];
+
 const cartElement = document.getElementById("cart");
 const cartOverlay = document.getElementById("cartOverlay");
 const cartItems = document.getElementById("cartItems");
@@ -6,266 +7,449 @@ const cartTotal = document.getElementById("cartTotal");
 const cartCount = document.getElementById("cartCount");
 const toast = document.getElementById("toast");
 
-/* ================= CART ================= */
 
-document.getElementById("openCart").addEventListener("click", openCart);
+// ===============================
+// FORMATAÇÃO DE PREÇO
+// ===============================
 
-document.getElementById("closeCart").addEventListener("click", closeCart);
+const money = value => {
+
+    return value.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+
+};
+
+
+// ===============================
+// CARRINHO
+// ===============================
+
+document
+    .getElementById("openCart")
+    .addEventListener("click", openCart);
+
+
+document
+    .getElementById("closeCart")
+    .addEventListener("click", closeCart);
+
 
 cartOverlay.addEventListener("click", closeCart);
 
+
 function openCart() {
 
-cartElement.classList.add("active");
-cartOverlay.classList.add("active");
+    cartElement.classList.add("active");
+
+    cartOverlay.classList.add("active");
 
 }
+
 
 function closeCart() {
 
-cartElement.classList.remove("active");
-cartOverlay.classList.remove("active");
+    cartElement.classList.remove("active");
+
+    cartOverlay.classList.remove("active");
 
 }
 
-/* ================= ADD PRODUCTS ================= */
 
-document.querySelectorAll(".add-cart").forEach(button => {
+// ===============================
+// ADICIONAR PRODUTO
+// ===============================
 
-button.addEventListener("click", () => {
+document
+    .querySelectorAll(".add-cart")
+    .forEach(button => {
 
-    const product = {
+        button.addEventListener("click", () => {
 
-        id: button.dataset.id,
+            const product = {
 
-        name: button.dataset.name,
+                id: button.dataset.id,
 
-        price: parseFloat(button.dataset.price),
+                name: button.dataset.name,
 
-        image: button.dataset.image,
+                price: Number(button.dataset.price),
 
-        quantity: 1
+                image: button.dataset.image,
 
-    };
+                quantity: 1
+
+            };
 
 
-    const existingProduct = cart.find(
-        item => item.id === product.id
+            const existing = cart.find(
+                item => item.id === product.id
+            );
+
+
+            if (existing) {
+
+                existing.quantity++;
+
+            } else {
+
+                cart.push(product);
+
+            }
+
+
+            updateCart();
+
+            showToast();
+
+        });
+
+    });
+
+
+// ===============================
+// ATUALIZAR CARRINHO
+// ===============================
+
+function updateCart() {
+
+    cartItems.innerHTML = "";
+
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+
+            <div class="empty-cart">
+
+                🐾
+
+                <p>
+                    Tu carrito está vacío.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    cart.forEach(product => {
+
+        const item = document.createElement("div");
+
+        item.className = "cart-item";
+
+
+        item.innerHTML = `
+
+            <div class="cart-item-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="cart-item-info">
+
+                <h4>
+                    ${product.name}
+                </h4>
+
+
+                <strong>
+                    ${money(product.price)}
+                </strong>
+
+
+                <div class="cart-controls">
+
+                    <button
+                        onclick="changeQuantity('${product.id}', -1)">
+                        −
+                    </button>
+
+
+                    <span>
+                        ${product.quantity}
+                    </span>
+
+
+                    <button
+                        onclick="changeQuantity('${product.id}', 1)">
+                        +
+                    </button>
+
+
+                    <button
+                        class="remove-item"
+                        onclick="removeItem('${product.id}')">
+
+                        ✕
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        cartItems.appendChild(item);
+
+    });
+
+
+    const total = cart.reduce(
+
+        (sum, product) =>
+
+            sum +
+            product.price *
+            product.quantity,
+
+        0
+
     );
 
 
-    if (existingProduct) {
+    const totalItems = cart.reduce(
 
-        existingProduct.quantity++;
+        (sum, product) =>
+
+            sum +
+            product.quantity,
+
+        0
+
+    );
+
+
+    cartTotal.textContent = money(total);
+
+    cartCount.textContent = totalItems;
+
+}
+
+
+// ===============================
+// QUANTIDADE
+// ===============================
+
+function changeQuantity(id, change) {
+
+    const product = cart.find(
+        item => item.id === id
+    );
+
+
+    if (!product) return;
+
+
+    product.quantity += change;
+
+
+    if (product.quantity <= 0) {
+
+        removeItem(id);
 
     } else {
 
-        cart.push(product);
+        updateCart();
+
+    }
+
+}
+
+
+// ===============================
+// REMOVER PRODUTO
+// ===============================
+
+function removeItem(id) {
+
+    const index = cart.findIndex(
+        item => item.id === id
+    );
+
+
+    if (index !== -1) {
+
+        cart.splice(index, 1);
 
     }
 
 
     updateCart();
 
-    showToast();
-
-});
-
-});
-
-/* ================= UPDATE CART ================= */
-
-function updateCart() {
-
-cartItems.innerHTML = "";
-
-
-if (cart.length === 0) {
-
-    cartItems.innerHTML = `
-
-        <div class="empty-cart">
-
-            🐾
-
-            <p>
-                Tu carrito está vacío.
-            </p>
-
-        </div>
-
-    `;
-
 }
 
 
-cart.forEach(product => {
-
-    const item = document.createElement("div");
-
-    item.classList.add("cart-item");
-
-
-    item.innerHTML = `
-
-        <div class="cart-item-image">
-
-            ${product.image}
-
-        </div>
-
-
-        <div class="cart-item-info">
-
-            <h4>
-                ${product.name}
-            </h4>
-
-            <strong>
-                €${product.price.toFixed(2)}
-            </strong>
-
-
-            <div class="cart-controls">
-
-                <button onclick="changeQuantity('${product.id}', -1)">
-                    −
-                </button>
-
-
-                <span>
-                    ${product.quantity}
-                </span>
-
-
-                <button onclick="changeQuantity('${product.id}', 1)">
-                    +
-                </button>
-
-
-                <button
-                    class="remove-item"
-                    onclick="removeItem('${product.id}')"
-                >
-                    ✕
-                </button>
-
-            </div>
-
-        </div>
-
-    `;
-
-
-    cartItems.appendChild(item);
-
-});
-
-
-const total = cart.reduce(
-
-    (sum, product) => {
-
-        return sum + product.price * product.quantity;
-
-    },
-
-    0
-
-);
-
-
-const totalItems = cart.reduce(
-
-    (sum, product) => {
-
-        return sum + product.quantity;
-
-    },
-
-    0
-
-);
-
-
-cartTotal.textContent = `€${total.toFixed(2)}`;
-
-cartCount.textContent = totalItems;
-
-}
-
-/* ================= CHANGE QUANTITY ================= */
-
-function changeQuantity(id, change) {
-
-const product = cart.find(
-    item => item.id === id
-);
-
-
-if (!product) return;
-
-
-product.quantity += change;
-
-
-if (product.quantity <= 0) {
-
-    removeItem(id);
-
-} else {
-
-    updateCart();
-
-}
-
-}
-
-/* ================= REMOVE PRODUCT ================= */
-
-function removeItem(id) {
-
-const index = cart.findIndex(
-    item => item.id === id
-);
-
-
-if (index !== -1) {
-
-    cart.splice(index, 1);
-
-}
-
-
-updateCart();
-
-}
-
-/* ================= TOAST ================= */
+// ===============================
+// AVISO DE PRODUTO ADICIONADO
+// ===============================
 
 function showToast() {
 
-toast.classList.add("show");
+    toast.classList.add("show");
 
 
-setTimeout(() => {
+    setTimeout(() => {
 
-    toast.classList.remove("show");
+        toast.classList.remove("show");
 
-}, 2500);
+    }, 2200);
 
 }
 
-/* ================= FILTER PRODUCTS ================= */
+
+// ===============================
+// FILTROS
+// ===============================
 
 const filterButtons =
-document.querySelectorAll(".filter-btn");
+    document.querySelectorAll(".filter-btn");
+
 
 filterButtons.forEach(button => {
 
-button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
-    const filter = button.dataset.filter;
+        const filter =
+            button.dataset.filter;
+
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        filterProducts(filter);
+
+    });
+
+});
+
+
+document
+    .querySelectorAll(".category-card")
+    .forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const filter =
+                card.dataset.filter;
+
+
+            document
+                .getElementById("productos")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+
+            setTimeout(() => {
+
+                filterButtons.forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+                const matchingButton =
+                    document.querySelector(
+                        `.filter-btn[data-filter="${filter}"]`
+                    );
+
+
+                if (matchingButton) {
+
+                    matchingButton.classList.add("active");
+
+                }
+
+
+                filterProducts(filter);
+
+            }, 400);
+
+        });
+
+    });
+
+
+function filterProducts(filter) {
+
+    document
+        .querySelectorAll(".product-card")
+        .forEach(product => {
+
+            if (
+                filter === "all" ||
+                product.dataset.category === filter
+            ) {
+
+                product.style.display = "block";
+
+            } else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+}
+
+
+// ===============================
+// PESQUISA
+// ===============================
+
+const searchBtn =
+    document.getElementById("searchBtn");
+
+
+const searchBox =
+    document.getElementById("searchBox");
+
+
+const closeSearch =
+    document.getElementById("closeSearch");
+
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+searchBtn.addEventListener("click", () => {
+
+    searchBox.classList.add("active");
+
+    searchInput.focus();
+
+});
+
+
+closeSearch.addEventListener("click", () => {
+
+    searchBox.classList.remove("active");
+
+    searchInput.value = "";
+
+
+    filterProducts("all");
 
 
     filterButtons.forEach(btn => {
@@ -275,227 +459,154 @@ button.addEventListener("click", () => {
     });
 
 
-    button.classList.add("active");
-
-
-    filterProducts(filter);
-
-});
-
-});
-
-document.querySelectorAll(".category-card").forEach(card => {
-
-card.addEventListener("click", () => {
-
-    const filter = card.dataset.filter;
-
-
     document
-        .getElementById("productos")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-
-    setTimeout(() => {
-
-        filterButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-
-        document
-            .querySelector(
-                `.filter-btn[data-filter="${filter}"]`
-            )
-            .classList
-            .add("active");
-
-
-        filterProducts(filter);
-
-    }, 500);
+        .querySelector(
+            '.filter-btn[data-filter="all"]'
+        )
+        .classList.add("active");
 
 });
 
-});
-
-function filterProducts(filter) {
-
-const products =
-    document.querySelectorAll(".product-card");
-
-
-products.forEach(product => {
-
-    if (
-
-        filter === "all" ||
-
-        product.dataset.category === filter
-
-    ) {
-
-        product.style.display = "block";
-
-    } else {
-
-        product.style.display = "none";
-
-    }
-
-});
-
-}
-
-/* ================= SEARCH ================= */
-
-const searchBtn =
-document.getElementById("searchBtn");
-
-const searchBox =
-document.getElementById("searchBox");
-
-const closeSearch =
-document.getElementById("closeSearch");
-
-const searchInput =
-document.getElementById("searchInput");
-
-searchBtn.addEventListener("click", () => {
-
-searchBox.classList.add("active");
-
-searchInput.focus();
-
-});
-
-closeSearch.addEventListener("click", () => {
-
-searchBox.classList.remove("active");
-
-searchInput.value = "";
-
-filterProducts("all");
-
-});
 
 searchInput.addEventListener("input", () => {
 
-const searchTerm =
-    searchInput.value.toLowerCase();
+    const searchTerm =
+        searchInput.value
+            .toLowerCase()
+            .trim();
 
+
+    document
+        .querySelectorAll(".product-card")
+        .forEach(product => {
+
+            const name =
+                product
+                    .querySelector("h3")
+                    .textContent
+                    .toLowerCase();
+
+
+            const description =
+                product
+                    .querySelector("p")
+                    .textContent
+                    .toLowerCase();
+
+
+            if (
+                name.includes(searchTerm) ||
+                description.includes(searchTerm)
+            ) {
+
+                product.style.display = "block";
+
+            } else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+});
+
+
+// ===============================
+// FAQ
+// ===============================
 
 document
-    .querySelectorAll(".product-card")
-    .forEach(product => {
+    .querySelectorAll(".faq-question")
+    .forEach(question => {
 
-        const name =
-            product
-            .querySelector("h3")
-            .textContent
-            .toLowerCase();
+        question.addEventListener("click", () => {
+
+            const item =
+                question.parentElement;
 
 
-        if (
+            document
+                .querySelectorAll(".faq-item")
+                .forEach(faq => {
 
-            name.includes(searchTerm)
+                    if (faq !== item) {
 
-        ) {
+                        faq.classList.remove("active");
 
-            product.style.display = "block";
+                    }
 
-        } else {
+                });
 
-            product.style.display = "none";
+
+            item.classList.toggle("active");
+
+        });
+
+    });
+
+
+// ===============================
+// NEWSLETTER
+// ===============================
+
+document
+    .getElementById("newsletterForm")
+    .addEventListener("submit", event => {
+
+        event.preventDefault();
+
+
+        const email =
+            document
+                .getElementById("newsletterEmail")
+                .value;
+
+
+        alert(
+            `¡Gracias! ${email} ha sido registrado en PataNova 🐾`
+        );
+
+
+        event.target.reset();
+
+    });
+
+
+// ===============================
+// CHECKOUT
+// ===============================
+
+document
+    .getElementById("checkoutBtn")
+    .addEventListener("click", () => {
+
+        if (cart.length === 0) {
+
+            alert(
+                "Tu carrito está vacío 🐾"
+            );
+
+            return;
 
         }
 
-    });
-
-});
-
-/* ================= FAQ ================= */
-
-document
-.querySelectorAll(".faq-question")
-.forEach(question => {
-
-    question.addEventListener("click", () => {
-
-        const item =
-            question.parentElement;
-
-
-        document
-            .querySelectorAll(".faq-item")
-            .forEach(faq => {
-
-                if (faq !== item) {
-
-                    faq.classList.remove("active");
-
-                }
-
-            });
-
-
-        item.classList.toggle("active");
-
-    });
-
-});
-
-/* ================= NEWSLETTER ================= */
-
-document
-.getElementById("newsletterForm")
-.addEventListener("submit", event => {
-
-    event.preventDefault();
-
-
-    const email =
-        document
-        .getElementById("newsletterEmail")
-        .value;
-
-
-    alert(
-        `¡Gracias! ${email} ha sido registrado para recibir novedades de PataNova 🐾`
-    );
-
-
-    event.target.reset();
-
-});
-
-/* ================= CHECKOUT ================= */
-
-document
-.getElementById("checkoutBtn")
-.addEventListener("click", () => {
-
-    if (cart.length === 0) {
 
         alert(
-            "Tu carrito está vacío 🐾"
+
+            "El carrito funciona correctamente. " +
+
+            "Antes de vender, debes conectar " +
+
+            "un proveedor de pagos y definir el envío."
+
         );
 
-        return;
-
-    }
+    });
 
 
-    alert(
-        "El checkout está preparado. El siguiente paso será conectar un proveedor de pago autorizado."
-    );
-
-});
-
-/* ================= START ================= */
+// ===============================
+// INICIAR
+// ===============================
 
 updateCart();
