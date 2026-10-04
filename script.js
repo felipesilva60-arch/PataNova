@@ -125,7 +125,7 @@ function updateCart() {
                 🐾
 
                 <p>
-                    Tu carrito está vacío.
+                    Seu carrinho está vazio.
                 </p>
 
             </div>
@@ -238,7 +238,7 @@ function updateCart() {
 
 
 // ===============================
-// QUANTIDADE
+// ALTERAR QUANTIDADE
 // ===============================
 
 function changeQuantity(id, change) {
@@ -352,7 +352,7 @@ document
 
 
             document
-                .getElementById("productos")
+                .getElementById("produtos")
                 .scrollIntoView({
                     behavior: "smooth"
                 });
@@ -396,7 +396,7 @@ function filterProducts(filter) {
         .forEach(product => {
 
             if (
-                filter === "all" ||
+                filter === "todos" ||
                 product.dataset.category === filter
             ) {
 
@@ -449,7 +449,7 @@ closeSearch.addEventListener("click", () => {
     searchInput.value = "";
 
 
-    filterProducts("all");
+    filterProducts("todos");
 
 
     filterButtons.forEach(btn => {
@@ -461,7 +461,7 @@ closeSearch.addEventListener("click", () => {
 
     document
         .querySelector(
-            '.filter-btn[data-filter="all"]'
+            '.filter-btn[data-filter="todos"]'
         )
         .classList.add("active");
 
@@ -513,7 +513,7 @@ searchInput.addEventListener("input", () => {
 
 
 // ===============================
-// FAQ
+// PERGUNTAS FREQUENTES
 // ===============================
 
 document
@@ -564,7 +564,7 @@ document
 
 
         alert(
-            `¡Gracias! ${email} ha sido registrado en PataNova 🐾`
+            `Obrigado! ${email} foi cadastrado na PataNova 🐾`
         );
 
 
@@ -574,7 +574,7 @@ document
 
 
 // ===============================
-// CHECKOUT
+// PAGAMENTO
 // ===============================
 
 document
@@ -584,7 +584,7 @@ document
         if (cart.length === 0) {
 
             alert(
-                "Tu carrito está vacío 🐾"
+                "Seu carrinho está vazio 🐾"
             );
 
             return;
@@ -594,11 +594,11 @@ document
 
         alert(
 
-            "El carrito funciona correctamente. " +
+            "O carrinho está funcionando corretamente. " +
 
-            "Antes de vender, debes conectar " +
+            "Antes de começar a vender, você precisa " +
 
-            "un proveedor de pagos y definir el envío."
+            "conectar um provedor de pagamento e definir o envio."
 
         );
 
