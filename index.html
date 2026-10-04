@@ -1,28 +1,34 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PataNova | Todo para tu mascota</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Productos modernos para perros y gatos. Descubre accesorios, juguetes y mucho más en PataNova.">
+    <title>PataNova | Todo para tu mascota</title>
 
-<link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Productos modernos para perros y gatos en PataNova.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-</head><body><!-- ================= HEADER ================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
 
 <header class="header">
 
     <div class="top-bar">
-        🚚 Envío a toda España · 🔒 Pago seguro · 🐾 Todo para tu mascota
+        🐾 PataNova · Productos para tu mascota · Precios en R$
     </div>
 
     <nav class="navbar">
 
-        <a href="#" class="logo">
+        <a href="#inicio" class="logo">
             <span>🐾</span> PataNova
         </a>
 
@@ -36,7 +42,7 @@
 
         <div class="nav-actions">
 
-            <button class="icon-btn" id="searchBtn" aria-label="Buscar">
+            <button class="icon-btn" id="searchBtn">
                 🔍
             </button>
 
@@ -49,8 +55,6 @@
 
     </nav>
 
-    <!-- BUSCADOR -->
-
     <div class="search-box" id="searchBox">
 
         <input
@@ -59,536 +63,1105 @@
             placeholder="Buscar productos..."
         >
 
-        <button id="closeSearch">✕</button>
+        <button id="closeSearch">
+            ✕
+        </button>
 
     </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
-
 <main>
 
-    <section class="hero" id="inicio">
+<!-- HERO -->
 
-        <div class="hero-content">
+<section class="hero" id="inicio">
 
-            <span class="badge">
-                🐾 NUEVA COLECCIÓN
-            </span>
+    <div class="hero-content">
 
-            <h1>
-                Todo lo que tu
-                <span>mascota merece.</span>
-            </h1>
+        <span class="badge">
+            🐾 NUEVA COLECCIÓN
+        </span>
 
-            <p>
-                Descubre productos modernos, prácticos y divertidos
-                para hacer más feliz la vida de tu perro o gato.
-            </p>
+        <h1>
+            Todo lo que tu
+            <span>mascota merece.</span>
+        </h1>
 
-            <div class="hero-buttons">
+        <p>
+            Descubre productos modernos, prácticos y divertidos
+            para hacer más feliz la vida de tu perro o gato.
+        </p>
 
-                <a href="#productos" class="btn btn-primary">
-                    Ver productos
-                </a>
+        <div class="hero-buttons">
 
-                <a href="#categorias" class="btn btn-secondary">
-                    Explorar categorías
-                </a>
+            <a href="#productos" class="btn btn-primary">
+                Ver productos
+            </a>
 
-            </div>
-
-        </div>
-
-        <div class="hero-visual">
-
-            <div class="hero-circle"></div>
-
-            <div class="hero-emoji hero-dog">🐶</div>
-            <div class="hero-emoji hero-cat">🐱</div>
-            <div class="floating-paw paw1">🐾</div>
-            <div class="floating-paw paw2">🐾</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= BENEFICIOS ================= -->
-
-    <section class="benefits">
-
-        <div class="benefit">
-            <div class="benefit-icon">🚚</div>
-            <div>
-                <strong>Envío rápido</strong>
-                <p>Seguimiento de tu pedido</p>
-            </div>
-        </div>
-
-        <div class="benefit">
-            <div class="benefit-icon">🔒</div>
-            <div>
-                <strong>Compra segura</strong>
-                <p>Pagos protegidos</p>
-            </div>
-        </div>
-
-        <div class="benefit">
-            <div class="benefit-icon">🐾</div>
-            <div>
-                <strong>Para perros y gatos</strong>
-                <p>Productos seleccionados</p>
-            </div>
-        </div>
-
-        <div class="benefit">
-            <div class="benefit-icon">💬</div>
-            <div>
-                <strong>Atención al cliente</strong>
-                <p>Estamos para ayudarte</p>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- ================= CATEGORIAS ================= -->
-
-    <section class="section categories-section" id="categorias">
-
-        <div class="section-header">
-
-            <div>
-                <span class="section-tag">EXPLORA</span>
-                <h2>Encuentra lo mejor para ellos 🐾</h2>
-            </div>
-
-        </div>
-
-
-        <div class="categories-grid">
-
-            <button class="category-card dog-card" data-filter="perros">
-
-                <span class="category-emoji">🐶</span>
-
-                <div>
-                    <h3>Para Perros</h3>
-                    <p>Juguetes, accesorios y más</p>
-                </div>
-
-                <span class="arrow">→</span>
-
-            </button>
-
-
-            <button class="category-card cat-card" data-filter="gatos">
-
-                <span class="category-emoji">🐱</span>
-
-                <div>
-                    <h3>Para Gatos</h3>
-                    <p>Diversión y comodidad</p>
-                </div>
-
-                <span class="arrow">→</span>
-
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FILTROS ================= -->
-
-    <section class="section" id="productos">
-
-        <div class="section-header">
-
-            <div>
-                <span class="section-tag">TIENDA</span>
-                <h2>Productos destacados</h2>
-            </div>
-
-        </div>
-
-
-        <div class="filters">
-
-            <button class="filter-btn active" data-filter="all">
-                Todos
-            </button>
-
-            <button class="filter-btn" data-filter="perros">
-                🐶 Perros
-            </button>
-
-            <button class="filter-btn" data-filter="gatos">
-                🐱 Gatos
-            </button>
-
-        </div>
-
-
-        <!-- PRODUCTOS -->
-
-        <div class="products-grid" id="productsGrid">
-
-            <article class="product-card" data-category="perros">
-
-                <div class="product-image">
-                    🧸
-                    <span class="product-badge">Popular</span>
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">PERROS</span>
-
-                    <h3>Juguete Interactivo</h3>
-
-                    <p>
-                        Diversión y entretenimiento para tu perro.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>€19.90</strong>
-
-                        <button
-                            class="add-cart"
-                            data-id="1"
-                            data-name="Juguete Interactivo"
-                            data-price="19.90"
-                            data-image="🧸"
-                        >
-                            Añadir
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card" data-category="perros">
-
-                <div class="product-image">
-                    🦮
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">PERROS</span>
-
-                    <h3>Correa Moderna</h3>
-
-                    <p>
-                        Cómoda y práctica para los paseos diarios.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>€24.90</strong>
-
-                        <button
-                            class="add-cart"
-                            data-id="2"
-                            data-name="Correa Moderna"
-                            data-price="24.90"
-                            data-image="🦮"
-                        >
-                            Añadir
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card" data-category="perros">
-
-                <div class="product-image">
-                    🥣
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">PERROS</span>
-
-                    <h3>Cuenco Portátil</h3>
-
-                    <p>
-                        Perfecto para paseos y viajes.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>€14.90</strong>
-
-                        <button
-                            class="add-cart"
-                            data-id="3"
-                            data-name="Cuenco Portátil"
-                            data-price="14.90"
-                            data-image="🥣"
-                        >
-                            Añadir
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card" data-category="gatos">
-
-                <div class="product-image">
-                    🐭
-                    <span class="product-badge">Nuevo</span>
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">GATOS</span>
-
-                    <h3>Juguete para Gatos</h3>
-
-                    <p>
-                        Diseñado para estimular el juego.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>€12.90</strong>
-
-                        <button
-                            class="add-cart"
-                            data-id="4"
-                            data-name="Juguete para Gatos"
-                            data-price="12.90"
-                            data-image="🐭"
-                        >
-                            Añadir
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card" data-category="gatos">
-
-                <div class="product-image">
-                    🛏️
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">GATOS</span>
-
-                    <h3>Cama Confort</h3>
-
-                    <p>
-                        Un espacio cómodo para descansar.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>€29.90</strong>
-
-                        <button
-                            class="add-cart"
-                            data-id="5"
-                            data-name="Cama Confort"
-                            data-price="29.90"
-                            data-image="🛏️"
-                        >
-                            Añadir
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="product-card" data-category="gatos">
-
-                <div class="product-image">
-                    🪀
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">GATOS</span>
-
-                    <h3>Juguete Interactivo</h3>
-
-                    <p>
-                        Horas de entretenimiento para tu gato.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>€17.90</strong>
-
-                        <button
-                            class="add-cart"
-                            data-id="6"
-                            data-name="Juguete Interactivo para Gatos"
-                            data-price="17.90"
-                            data-image="🪀"
-                        >
-                            Añadir
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= BANNER ================= -->
-
-    <section class="promo">
-
-        <div>
-
-            <span>🐾 PATANOVA</span>
-
-            <h2>
-                Una vida más feliz empieza
-                con pequeños momentos.
-            </h2>
-
-            <a href="#productos" class="btn btn-light">
-                Descubrir productos
+            <a href="#categorias" class="btn btn-secondary">
+                Explorar categorías
             </a>
 
         </div>
 
-        <div class="promo-pets">
-            🐶 🐱
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-circle"></div>
+
+        <img
+            class="hero-pet-photo"
+            src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=85"
+            alt="Perro">
+
+        <div class="floating-paw paw1">
+            🐾
         </div>
 
-    </section>
-
-
-    <!-- ================= FAQ ================= -->
-
-    <section class="section faq-section" id="faq">
-
-        <div class="section-header center">
-
-            <span class="section-tag">AYUDA</span>
-
-            <h2>Preguntas frecuentes</h2>
-
+        <div class="floating-paw paw2">
+            🐾
         </div>
 
+    </div>
 
-        <div class="faq-list">
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    ¿Cómo puedo seguir mi pedido?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-                    Recibirás información de seguimiento cuando tu pedido sea enviado.
-                </div>
-
-            </div>
+</section>
 
 
-            <div class="faq-item">
+<!-- BENEFICIOS -->
 
-                <button class="faq-question">
-                    ¿Cuánto tarda el envío?
-                    <span>+</span>
-                </button>
+<section class="benefits">
 
-                <div class="faq-answer">
-                    El plazo de entrega dependerá del producto y de la dirección de entrega.
-                </div>
+    <div class="benefit">
 
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    ¿Qué métodos de pago aceptan?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-                    Los métodos de pago disponibles aparecerán durante el proceso de compra cuando la tienda esté conectada a un proveedor de pagos.
-                </div>
-
-            </div>
-
+        <div class="benefit-icon">
+            🚚
         </div>
 
-    </section>
+        <div>
+            <strong>Envío rápido</strong>
+            <p>Información de entrega</p>
+        </div>
+
+    </div>
 
 
-    <!-- ================= NEWSLETTER ================= -->
+    <div class="benefit">
 
-    <section class="newsletter">
+        <div class="benefit-icon">
+            🔒
+        </div>
+
+        <div>
+            <strong>Compra segura</strong>
+            <p>Pago protegido</p>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="benefit-icon">
+            🐾
+        </div>
+
+        <div>
+            <strong>Perros y gatos</strong>
+            <p>Productos seleccionados</p>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="benefit-icon">
+            💬
+        </div>
+
+        <div>
+            <strong>Atención</strong>
+            <p>Estamos para ayudarte</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIAS -->
+
+<section
+    class="section categories-section"
+    id="categorias">
+
+    <div class="section-header">
 
         <div>
 
-            <span>🐾 CLUB PATANOVA</span>
+            <span class="section-tag">
+                EXPLORA
+            </span>
 
             <h2>
-                Recibe novedades y ofertas especiales.
+                Encuentra lo mejor para ellos 🐾
             </h2>
 
         </div>
 
+    </div>
 
-        <form id="newsletterForm">
 
-            <input
-                type="email"
-                id="newsletterEmail"
-                placeholder="Tu correo electrónico"
-                required
-            >
+    <div class="categories-grid">
 
-            <button type="submit">
-                Suscribirme
+
+        <button
+            class="category-card dog-card"
+            data-filter="perros"
+            id="perros">
+
+            <span class="category-photo">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=85"
+                    alt="Perro">
+
+            </span>
+
+            <div>
+
+                <h3>
+                    Para Perros
+                </h3>
+
+                <p>
+                    Juguetes, accesorios y alimentación
+                </p>
+
+            </div>
+
+            <span class="arrow">
+                →
+            </span>
+
+        </button>
+
+
+        <button
+            class="category-card cat-card"
+            data-filter="gatos"
+            id="gatos">
+
+            <span class="category-photo">
+
+                <img
+                    src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=85"
+                    alt="Gato">
+
+            </span>
+
+            <div>
+
+                <h3>
+                    Para Gatos
+                </h3>
+
+                <p>
+                    Diversión, descanso y comodidad
+                </p>
+
+            </div>
+
+            <span class="arrow">
+                →
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUTOS -->
+
+<section
+    class="section"
+    id="productos">
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="section-tag">
+                TIENDA
+            </span>
+
+            <h2>
+                Productos destacados
+            </h2>
+
+        </div>
+
+        <span class="price-note">
+            Valores de referencia en R$
+        </span>
+
+    </div>
+
+
+    <div class="filters">
+
+        <button
+            class="filter-btn active"
+            data-filter="all">
+            Todos
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="perros">
+            🐶 Perros
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="gatos">
+            🐱 Gatos
+        </button>
+
+    </div>
+
+
+    <div
+        class="products-grid"
+        id="productsGrid">
+
+
+        <!-- PRODUTO 1 -->
+
+        <article
+            class="product-card"
+            data-category="perros">
+
+            <div class="product-image">
+
+                <img
+                    src="https://cobasi.vteximg.com.br/arquivos/ids/1065829-368-368/Mordedor-Abacaxi-Flicks.jpg"
+                    alt="Mordedor para cachorro">
+
+                <span class="product-badge">
+                    Oferta
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    PERROS
+                </span>
+
+                <h3>
+                    Mordedor Abacaxi Flicks
+                </h3>
+
+                <p>
+                    Brinquedo resistente e divertido para cães.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 18,60
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="1"
+                        data-name="Mordedor Abacaxi Flicks"
+                        data-price="18.60"
+                        data-image="https://cobasi.vteximg.com.br/arquivos/ids/1065829-368-368/Mordedor-Abacaxi-Flicks.jpg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 2 -->
+
+        <article
+            class="product-card"
+            data-category="perros">
+
+            <div class="product-image">
+
+                <img
+                    src="https://i5.walmartimages.com/seo/KONG-Classic-Dog-Toy-Red-XX-Large_1b90c58b-090a-42b5-85a9-71820f7b81b8.b23b5eb56bae2086f1efdaa12aa56afe.jpeg"
+                    alt="Brinquedo KONG">
+
+                <span class="product-badge">
+                    Popular
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    PERROS
+                </span>
+
+                <h3>
+                    KONG Classic Mordedor
+                </h3>
+
+                <p>
+                    Brinquedo para mastigar e estimular o cão.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 119,99
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="2"
+                        data-name="KONG Classic Mordedor"
+                        data-price="119.99"
+                        data-image="https://i5.walmartimages.com/seo/KONG-Classic-Dog-Toy-Red-XX-Large_1b90c58b-090a-42b5-85a9-71820f7b81b8.b23b5eb56bae2086f1efdaa12aa56afe.jpeg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 3 -->
+
+        <article
+            class="product-card"
+            data-category="perros">
+
+            <div class="product-image">
+
+                <img
+                    src="https://i5.walmartimages.com/seo/Pet-Enjoy-2Pcs-Stainless-Steel-Dog-Bowls-Durable-Non-Slip-Metal-Food-Bowls-Dog-Pets-Feeder-Bowl-Water-Choice-Puppy-Cat-Kitten_bed498f9-4762-4f76-af55-4988fba88642.b29a77f1611d19ce9765b685519f925b.jpeg"
+                    alt="Comedouro">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    PERROS
+                </span>
+
+                <h3>
+                    Comedouro de Inox
+                </h3>
+
+                <p>
+                    Modelo prático para água ou alimento.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 39,90
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="3"
+                        data-name="Comedouro de Inox"
+                        data-price="39.90"
+                        data-image="https://i5.walmartimages.com/seo/Pet-Enjoy-2Pcs-Stainless-Steel-Dog-Bowls-Durable-Non-Slip-Metal-Food-Bowls-Dog-Pets-Feeder-Bowl-Water-Choice-Puppy-Cat-Kitten_bed498f9-4762-4f76-af55-4988fba88642.b29a77f1611d19ce9765b685519f925b.jpeg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 4 -->
+
+        <article
+            class="product-card"
+            data-category="perros">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=900&q=85"
+                    alt="Cachorro">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    PERROS
+                </span>
+
+                <h3>
+                    Guía para Paseos
+                </h3>
+
+                <p>
+                    Acessório prático para caminhadas.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 119,00
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="4"
+                        data-name="Guía para Paseos"
+                        data-price="119.00"
+                        data-image="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=900&q=85">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 5 -->
+
+        <article
+            class="product-card"
+            data-category="perros">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=85"
+                    alt="Cachorro">
+
+                <span class="product-badge">
+                    Nuevo
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    PERROS
+                </span>
+
+                <h3>
+                    Comedouro Lento
+                </h3>
+
+                <p>
+                    Ajuda a tornar a alimentação mais tranquila.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 26,90
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="5"
+                        data-name="Comedouro Lento"
+                        data-price="26.90"
+                        data-image="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=85">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 6 -->
+
+        <article
+            class="product-card"
+            data-category="perros">
+
+            <div class="product-image">
+
+                <img
+                    src="https://i5.walmartimages.com/seo/Washable-Xxl-Dog-Bed-For-Extra-Large-Dogs_7a5ba9ea-9ac7-4c30-a861-7ab3008848ca.e6057c8ee41d4d0847ae10b709915ed3.png"
+                    alt="Cama para cachorro">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    PERROS
+                </span>
+
+                <h3>
+                    Cama Confort
+                </h3>
+
+                <p>
+                    Espaço confortável para o descanso.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 209,90
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="6"
+                        data-name="Cama Confort"
+                        data-price="209.90"
+                        data-image="https://i5.walmartimages.com/seo/Washable-Xxl-Dog-Bed-For-Extra-Large-Dogs_7a5ba9ea-9ac7-4c30-a861-7ab3008848ca.e6057c8ee41d4d0847ae10b709915ed3.png">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 7 -->
+
+        <article
+            class="product-card"
+            data-category="gatos">
+
+            <div class="product-image">
+
+                <img
+                    src="https://i5.walmartimages.com/seo/Indoor-Cat-Scratching-Post-with-Carpeted-Base-27-75-Inch-Beige-Sisal-Burlap-Fabric-by-PETMAKER_83ccda3d-c763-4c60-9cf0-c0a98461ed50.21d957d2b5838acc5704b18bc84b4dec.jpeg"
+                    alt="Arranhador">
+
+                <span class="product-badge">
+                    Gatos
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    GATOS
+                </span>
+
+                <h3>
+                    Arranhador para Gatos
+                </h3>
+
+                <p>
+                    Para brincar, alongar e cuidar das unhas.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 57,99
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="7"
+                        data-name="Arranhador para Gatos"
+                        data-price="57.99"
+                        data-image="https://i5.walmartimages.com/seo/Indoor-Cat-Scratching-Post-with-Carpeted-Base-27-75-Inch-Beige-Sisal-Burlap-Fabric-by-PETMAKER_83ccda3d-c763-4c60-9cf0-c0a98461ed50.21d957d2b5838acc5704b18bc84b4dec.jpeg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 8 -->
+
+        <article
+            class="product-card"
+            data-category="gatos">
+
+            <div class="product-image">
+
+                <img
+                    src="https://i5.walmartimages.com/seo/K-H-Pet-Products-Thermo-Kitty-Bed-Indoor-Heated-Cat-Bed-Sage-Tan-Small-16-Inches_dacb1c03-076d-4203-8f13-bdaf20e33693.099f64ea0ed8ac59b91bf05694a36e8b.jpeg"
+                    alt="Cama para gato">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    GATOS
+                </span>
+
+                <h3>
+                    Cama Confort para Gatos
+                </h3>
+
+                <p>
+                    Um cantinho confortável para descansar.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 85,90
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="8"
+                        data-name="Cama Confort para Gatos"
+                        data-price="85.90"
+                        data-image="https://i5.walmartimages.com/seo/K-H-Pet-Products-Thermo-Kitty-Bed-Indoor-Heated-Cat-Bed-Sage-Tan-Small-16-Inches_dacb1c03-076d-4203-8f13-bdaf20e33693.099f64ea0ed8ac59b91bf05694a36e8b.jpeg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 9 -->
+
+        <article
+            class="product-card"
+            data-category="gatos">
+
+            <div class="product-image">
+
+                <img
+                    src="https://i5.walmartimages.com/seo/Interactive-Cat-Toy-Spiral-Track-Ball-Spinner-Plastic-Activity-Center-for-Kittens-and-Indoor-Play_8d2ac7b0-f56e-4770-9fbd-97bc4601143b.0ea035db1bf9641342b6cedb665a1300.jpeg"
+                    alt="Brinquedo para gato">
+
+                <span class="product-badge">
+                    Nuevo
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    GATOS
+                </span>
+
+                <h3>
+                    Brinquedo Interativo
+                </h3>
+
+                <p>
+                    Estimula o movimento e a curiosidade do gato.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 13,40
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="9"
+                        data-name="Brinquedo Interativo"
+                        data-price="13.40"
+                        data-image="https://i5.walmartimages.com/seo/Interactive-Cat-Toy-Spiral-Track-Ball-Spinner-Plastic-Activity-Center-for-Kittens-and-Indoor-Play_8d2ac7b0-f56e-4770-9fbd-97bc4601143b.0ea035db1bf9641342b6cedb665a1300.jpeg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 10 -->
+
+        <article
+            class="product-card"
+            data-category="gatos">
+
+            <div class="product-image">
+
+                <img
+                    src="https://m.media-amazon.com/images/I/71p48B-g4dL._AC_SL1500_.jpg"
+                    alt="Fonte de água">
+
+                <span class="product-badge">
+                    Popular
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    GATOS
+                </span>
+
+                <h3>
+                    Fonte de Água Inox
+                </h3>
+
+                <p>
+                    Água corrente para incentivar a hidratação.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 199,99
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="10"
+                        data-name="Fonte de Água Inox"
+                        data-price="199.99"
+                        data-image="https://m.media-amazon.com/images/I/71p48B-g4dL._AC_SL1500_.jpg">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 11 -->
+
+        <article
+            class="product-card"
+            data-category="gatos">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=900&q=85"
+                    alt="Gato">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    GATOS
+                </span>
+
+                <h3>
+                    Brinquedo com Catnip
+                </h3>
+
+                <p>
+                    Opção para enriquecer a rotina de brincadeiras.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 16,50
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="11"
+                        data-name="Brinquedo com Catnip"
+                        data-price="16.50"
+                        data-image="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=900&q=85">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUTO 12 -->
+
+        <article
+            class="product-card"
+            data-category="gatos">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?auto=format&fit=crop&w=900&q=85"
+                    alt="Gato">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    GATOS
+                </span>
+
+                <h3>
+                    Bola con Plumas
+                </h3>
+
+                <p>
+                    Brinquedo leve para momentos de diversão.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        R$ 13,40
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-id="12"
+                        data-name="Bola con Plumas"
+                        data-price="13.40"
+                        data-image="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?auto=format&fit=crop&w=900&q=85">
+
+                        Añadir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <p class="catalog-disclaimer">
+        * Los precios son referencias y pueden cambiar según la tienda,
+        promoción, tamaño y disponibilidad.
+    </p>
+
+</section>
+
+
+<!-- PROMO -->
+
+<section class="promo">
+
+    <div>
+
+        <span>
+            🐾 PATANOVA
+        </span>
+
+        <h2>
+            Una vida más feliz empieza
+            con pequeños momentos.
+        </h2>
+
+        <a
+            href="#productos"
+            class="btn btn-light">
+
+            Descubrir productos
+
+        </a>
+
+    </div>
+
+    <div class="promo-pets">
+        🐶 🐱
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section
+    class="section faq-section"
+    id="faq">
+
+    <div class="section-header center">
+
+        <span class="section-tag">
+            AYUDA
+        </span>
+
+        <h2>
+            Preguntas frecuentes
+        </h2>
+
+    </div>
+
+
+    <div class="faq-list">
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                ¿Cómo puedo seguir mi pedido?
+
+                <span>
+                    +
+                </span>
+
             </button>
 
-        </form>
+            <div class="faq-answer">
 
-    </section>
+                Recibirás información de seguimiento
+                cuando el pedido sea enviado.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                ¿Cuánto tarda el envío?
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                El plazo depende del producto
+                y de la dirección de entrega.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                ¿Qué métodos de pago aceptan?
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                El checkout de esta versión es una demostración.
+                Debes conectar un proveedor de pagos antes de vender.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <div>
+
+        <span>
+            🐾 CLUB PATANOVA
+        </span>
+
+        <h2>
+            Recibe novedades y ofertas especiales.
+        </h2>
+
+    </div>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Tu correo electrónico"
+            required
+        >
+
+        <button type="submit">
+            Suscribirme
+        </button>
+
+    </form>
+
+</section>
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -596,11 +1169,13 @@
 
         <div>
 
-            <h2>🐾 PataNova</h2>
+            <h2>
+                🐾 PataNova
+            </h2>
 
             <p>
-                Productos seleccionados para hacer más feliz
-                la vida de perros y gatos.
+                Productos seleccionados para hacer
+                más feliz la vida de perros y gatos.
             </p>
 
         </div>
@@ -608,30 +1183,51 @@
 
         <div>
 
-            <h4>Tienda</h4>
+            <h4>
+                Tienda
+            </h4>
 
-            <a href="#productos">Productos</a>
-            <a href="#categorias">Categorías</a>
+            <a href="#productos">
+                Productos
+            </a>
 
-        </div>
-
-
-        <div>
-
-            <h4>Ayuda</h4>
-
-            <a href="#faq">Preguntas frecuentes</a>
-            <a href="#">Contacto</a>
+            <a href="#categorias">
+                Categorías
+            </a>
 
         </div>
 
 
         <div>
 
-            <h4>Síguenos</h4>
+            <h4>
+                Ayuda
+            </h4>
 
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
+            <a href="#faq">
+                Preguntas frecuentes
+            </a>
+
+            <a href="#">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Síguenos
+            </h4>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
 
         </div>
 
@@ -640,23 +1236,31 @@
 
     <div class="footer-bottom">
 
-        © 2026 PataNova. Todos los derechos reservados.
+        © 2026 PataNova.
+        Todos los derechos reservados.
 
     </div>
 
 </footer>
 
 
-<!-- ================= CARRINHO ================= -->
+<!-- CARRINHO -->
 
-<div class="cart-overlay" id="cartOverlay"></div>
+<div
+    class="cart-overlay"
+    id="cartOverlay">
+</div>
 
 
-<aside class="cart" id="cart">
+<aside
+    class="cart"
+    id="cart">
 
     <div class="cart-header">
 
-        <h2>Tu carrito 🛒</h2>
+        <h2>
+            Tu carrito 🛒
+        </h2>
 
         <button id="closeCart">
             ✕
@@ -665,11 +1269,18 @@
     </div>
 
 
-    <div id="cartItems" class="cart-items">
+    <div
+        id="cartItems"
+        class="cart-items">
 
         <div class="empty-cart">
+
             🐾
-            <p>Tu carrito está vacío.</p>
+
+            <p>
+                Tu carrito está vacío.
+            </p>
+
         </div>
 
     </div>
@@ -679,14 +1290,20 @@
 
         <div class="cart-total">
 
-            <span>Total</span>
+            <span>
+                Total
+            </span>
 
-            <strong id="cartTotal">€0.00</strong>
+            <strong id="cartTotal">
+                R$ 0,00
+            </strong>
 
         </div>
 
 
-        <button class="checkout-btn" id="checkoutBtn">
+        <button
+            class="checkout-btn"
+            id="checkoutBtn">
 
             Ir al pago 🔒
 
@@ -694,7 +1311,10 @@
 
 
         <small>
-            El pago será conectado a un proveedor autorizado posteriormente.
+
+            Checkout de demonstração.
+            Conecte um provedor de pagamento antes de vender.
+
         </small>
 
     </div>
@@ -702,14 +1322,16 @@
 </aside>
 
 
-<!-- ================= TOAST ================= -->
+<!-- TOAST -->
 
-<div class="toast" id="toast">
+<div
+    class="toast"
+    id="toast">
+
     Producto añadido al carrito 🐾
+
 </div>
 
-
-<!-- ================= JAVASCRIPT ================= -->
 
 <script src="script.js"></script>
 
