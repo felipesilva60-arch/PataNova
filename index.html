@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PataNova | Todo para tu mascota</title>
+    <title>PataNova | Tudo para seu pet</title>
 
     <meta name="description"
-        content="Productos modernos para perros y gatos en PataNova.">
+        content="Produtos modernos para cães e gatos na PataNova.">
 
     <link rel="stylesheet" href="style.css">
 
@@ -23,7 +24,7 @@
 <header class="header">
 
     <div class="top-bar">
-        🐾 PataNova · Productos para tu mascota · Precios en R$
+        🐾 PataNova · Produtos para seu pet · Preços em R$
     </div>
 
     <nav class="navbar">
@@ -33,38 +34,63 @@
         </a>
 
         <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#perros">Perros</a>
+
+            <a href="#inicio">Início</a>
+
+            <a href="#caes">Cães</a>
+
             <a href="#gatos">Gatos</a>
-            <a href="#productos">Productos</a>
-            <a href="#faq">Ayuda</a>
+
+            <a href="#produtos">Produtos</a>
+
+            <a href="#faq">Ajuda</a>
+
         </div>
 
         <div class="nav-actions">
 
-            <button class="icon-btn" id="searchBtn">
+            <button
+                class="icon-btn"
+                id="searchBtn"
+                aria-label="Pesquisar">
+
                 🔍
+
             </button>
 
-            <button class="cart-btn" id="openCart">
+            <button
+                class="cart-btn"
+                id="openCart"
+                aria-label="Abrir carrinho">
+
                 🛒
-                <span id="cartCount">0</span>
+
+                <span id="cartCount">
+                    0
+                </span>
+
             </button>
 
         </div>
 
     </nav>
 
-    <div class="search-box" id="searchBox">
+
+    <div
+        class="search-box"
+        id="searchBox">
 
         <input
             type="text"
             id="searchInput"
-            placeholder="Buscar productos..."
-        >
+            placeholder="Pesquisar produtos...">
 
-        <button id="closeSearch">
+        <button
+            id="closeSearch"
+            aria-label="Fechar pesquisa">
+
             ✕
+
         </button>
 
     </div>
@@ -74,34 +100,44 @@
 
 <main>
 
-<!-- HERO -->
+<!-- ==================== HERO ==================== -->
 
-<section class="hero" id="inicio">
+<section
+    class="hero"
+    id="inicio">
 
     <div class="hero-content">
 
         <span class="badge">
-            🐾 NUEVA COLECCIÓN
+            🐾 NOVA COLEÇÃO
         </span>
 
         <h1>
-            Todo lo que tu
-            <span>mascota merece.</span>
+            Tudo o que seu
+            <span>pet merece.</span>
         </h1>
 
         <p>
-            Descubre productos modernos, prácticos y divertidos
-            para hacer más feliz la vida de tu perro o gato.
+            Descubra produtos modernos, práticos e divertidos
+            para deixar a vida do seu cão ou gato ainda mais feliz.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#productos" class="btn btn-primary">
-                Ver productos
+            <a
+                href="#produtos"
+                class="btn btn-primary">
+
+                Ver produtos
+
             </a>
 
-            <a href="#categorias" class="btn btn-secondary">
-                Explorar categorías
+            <a
+                href="#categorias"
+                class="btn btn-secondary">
+
+                Explorar categorias
+
             </a>
 
         </div>
@@ -116,7 +152,7 @@
         <img
             class="hero-pet-photo"
             src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=85"
-            alt="Perro">
+            alt="Cachorro">
 
         <div class="floating-paw paw1">
             🐾
@@ -131,7 +167,7 @@
 </section>
 
 
-<!-- BENEFICIOS -->
+<!-- ==================== BENEFÍCIOS ==================== -->
 
 <section class="benefits">
 
@@ -142,8 +178,15 @@
         </div>
 
         <div>
-            <strong>Envío rápido</strong>
-            <p>Información de entrega</p>
+
+            <strong>
+                Envio rápido
+            </strong>
+
+            <p>
+                Informações de entrega
+            </p>
+
         </div>
 
     </div>
@@ -156,8 +199,15 @@
         </div>
 
         <div>
-            <strong>Compra segura</strong>
-            <p>Pago protegido</p>
+
+            <strong>
+                Compra segura
+            </strong>
+
+            <p>
+                Pagamento protegido
+            </p>
+
         </div>
 
     </div>
@@ -170,8 +220,15 @@
         </div>
 
         <div>
-            <strong>Perros y gatos</strong>
-            <p>Productos seleccionados</p>
+
+            <strong>
+                Cães e gatos
+            </strong>
+
+            <p>
+                Produtos selecionados
+            </p>
+
         </div>
 
     </div>
@@ -184,8 +241,15 @@
         </div>
 
         <div>
-            <strong>Atención</strong>
-            <p>Estamos para ayudarte</p>
+
+            <strong>
+                Atendimento
+            </strong>
+
+            <p>
+                Estamos aqui para ajudar
+            </p>
+
         </div>
 
     </div>
@@ -193,7 +257,7 @@
 </section>
 
 
-<!-- CATEGORIAS -->
+<!-- ==================== CATEGORIAS ==================== -->
 
 <section
     class="section categories-section"
@@ -204,11 +268,11 @@
         <div>
 
             <span class="section-tag">
-                EXPLORA
+                EXPLORE
             </span>
 
             <h2>
-                Encuentra lo mejor para ellos 🐾
+                Encontre o melhor para eles 🐾
             </h2>
 
         </div>
@@ -219,27 +283,29 @@
     <div class="categories-grid">
 
 
+        <!-- CÃES -->
+
         <button
             class="category-card dog-card"
-            data-filter="perros"
-            id="perros">
+            data-filter="caes"
+            id="caes">
 
             <span class="category-photo">
 
                 <img
                     src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=85"
-                    alt="Perro">
+                    alt="Cachorro">
 
             </span>
 
             <div>
 
                 <h3>
-                    Para Perros
+                    Para cães
                 </h3>
 
                 <p>
-                    Juguetes, accesorios y alimentación
+                    Brinquedos, acessórios e alimentação
                 </p>
 
             </div>
@@ -250,6 +316,8 @@
 
         </button>
 
+
+        <!-- GATOS -->
 
         <button
             class="category-card cat-card"
@@ -267,11 +335,11 @@
             <div>
 
                 <h3>
-                    Para Gatos
+                    Para gatos
                 </h3>
 
                 <p>
-                    Diversión, descanso y comodidad
+                    Diversão, descanso e conforto
                 </p>
 
             </div>
@@ -287,51 +355,59 @@
 </section>
 
 
-<!-- PRODUTOS -->
+<!-- ==================== PRODUTOS ==================== -->
 
 <section
     class="section"
-    id="productos">
+    id="produtos">
 
     <div class="section-header">
 
         <div>
 
             <span class="section-tag">
-                TIENDA
+                LOJA
             </span>
 
             <h2>
-                Productos destacados
+                Produtos em destaque
             </h2>
 
         </div>
 
         <span class="price-note">
-            Valores de referencia en R$
+            Valores de referência em R$
         </span>
 
     </div>
 
 
+    <!-- FILTROS -->
+
     <div class="filters">
 
         <button
             class="filter-btn active"
-            data-filter="all">
+            data-filter="todos">
+
             Todos
+
         </button>
 
         <button
             class="filter-btn"
-            data-filter="perros">
-            🐶 Perros
+            data-filter="caes">
+
+            🐶 Cães
+
         </button>
 
         <button
             class="filter-btn"
             data-filter="gatos">
+
             🐱 Gatos
+
         </button>
 
     </div>
@@ -346,13 +422,13 @@
 
         <article
             class="product-card"
-            data-category="perros">
+            data-category="caes">
 
             <div class="product-image">
 
                 <img
                     src="https://cobasi.vteximg.com.br/arquivos/ids/1065829-368-368/Mordedor-Abacaxi-Flicks.jpg"
-                    alt="Mordedor para cachorro">
+                    alt="Brinquedo mordedor para cachorro">
 
                 <span class="product-badge">
                     Oferta
@@ -363,7 +439,7 @@
             <div class="product-info">
 
                 <span class="product-category">
-                    PERROS
+                    CÃES
                 </span>
 
                 <h3>
@@ -387,7 +463,7 @@
                         data-price="18.60"
                         data-image="https://cobasi.vteximg.com.br/arquivos/ids/1065829-368-368/Mordedor-Abacaxi-Flicks.jpg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -402,13 +478,13 @@
 
         <article
             class="product-card"
-            data-category="perros">
+            data-category="caes">
 
             <div class="product-image">
 
                 <img
                     src="https://i5.walmartimages.com/seo/KONG-Classic-Dog-Toy-Red-XX-Large_1b90c58b-090a-42b5-85a9-71820f7b81b8.b23b5eb56bae2086f1efdaa12aa56afe.jpeg"
-                    alt="Brinquedo KONG">
+                    alt="Brinquedo KONG para cachorro">
 
                 <span class="product-badge">
                     Popular
@@ -419,7 +495,7 @@
             <div class="product-info">
 
                 <span class="product-category">
-                    PERROS
+                    CÃES
                 </span>
 
                 <h3>
@@ -443,7 +519,7 @@
                         data-price="119.99"
                         data-image="https://i5.walmartimages.com/seo/KONG-Classic-Dog-Toy-Red-XX-Large_1b90c58b-090a-42b5-85a9-71820f7b81b8.b23b5eb56bae2086f1efdaa12aa56afe.jpeg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -458,20 +534,20 @@
 
         <article
             class="product-card"
-            data-category="perros">
+            data-category="caes">
 
             <div class="product-image">
 
                 <img
                     src="https://i5.walmartimages.com/seo/Pet-Enjoy-2Pcs-Stainless-Steel-Dog-Bowls-Durable-Non-Slip-Metal-Food-Bowls-Dog-Pets-Feeder-Bowl-Water-Choice-Puppy-Cat-Kitten_bed498f9-4762-4f76-af55-4988fba88642.b29a77f1611d19ce9765b685519f925b.jpeg"
-                    alt="Comedouro">
+                    alt="Comedouro de inox">
 
             </div>
 
             <div class="product-info">
 
                 <span class="product-category">
-                    PERROS
+                    CÃES
                 </span>
 
                 <h3>
@@ -495,7 +571,7 @@
                         data-price="39.90"
                         data-image="https://i5.walmartimages.com/seo/Pet-Enjoy-2Pcs-Stainless-Steel-Dog-Bowls-Durable-Non-Slip-Metal-Food-Bowls-Dog-Pets-Feeder-Bowl-Water-Choice-Puppy-Cat-Kitten_bed498f9-4762-4f76-af55-4988fba88642.b29a77f1611d19ce9765b685519f925b.jpeg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -510,7 +586,7 @@
 
         <article
             class="product-card"
-            data-category="perros">
+            data-category="caes">
 
             <div class="product-image">
 
@@ -523,11 +599,11 @@
             <div class="product-info">
 
                 <span class="product-category">
-                    PERROS
+                    CÃES
                 </span>
 
                 <h3>
-                    Guía para Paseos
+                    Guia para Passeios
                 </h3>
 
                 <p>
@@ -543,11 +619,11 @@
                     <button
                         class="add-cart"
                         data-id="4"
-                        data-name="Guía para Paseos"
+                        data-name="Guia para Passeios"
                         data-price="119.00"
                         data-image="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=900&q=85">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -562,7 +638,7 @@
 
         <article
             class="product-card"
-            data-category="perros">
+            data-category="caes">
 
             <div class="product-image">
 
@@ -571,7 +647,7 @@
                     alt="Cachorro">
 
                 <span class="product-badge">
-                    Nuevo
+                    Novo
                 </span>
 
             </div>
@@ -579,7 +655,7 @@
             <div class="product-info">
 
                 <span class="product-category">
-                    PERROS
+                    CÃES
                 </span>
 
                 <h3>
@@ -603,7 +679,7 @@
                         data-price="26.90"
                         data-image="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=85">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -618,7 +694,7 @@
 
         <article
             class="product-card"
-            data-category="perros">
+            data-category="caes">
 
             <div class="product-image">
 
@@ -631,7 +707,7 @@
             <div class="product-info">
 
                 <span class="product-category">
-                    PERROS
+                    CÃES
                 </span>
 
                 <h3>
@@ -655,7 +731,7 @@
                         data-price="209.90"
                         data-image="https://i5.walmartimages.com/seo/Washable-Xxl-Dog-Bed-For-Extra-Large-Dogs_7a5ba9ea-9ac7-4c30-a861-7ab3008848ca.e6057c8ee41d4d0847ae10b709915ed3.png">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -676,7 +752,7 @@
 
                 <img
                     src="https://i5.walmartimages.com/seo/Indoor-Cat-Scratching-Post-with-Carpeted-Base-27-75-Inch-Beige-Sisal-Burlap-Fabric-by-PETMAKER_83ccda3d-c763-4c60-9cf0-c0a98461ed50.21d957d2b5838acc5704b18bc84b4dec.jpeg"
-                    alt="Arranhador">
+                    alt="Arranhador para gatos">
 
                 <span class="product-badge">
                     Gatos
@@ -711,7 +787,7 @@
                         data-price="57.99"
                         data-image="https://i5.walmartimages.com/seo/Indoor-Cat-Scratching-Post-with-Carpeted-Base-27-75-Inch-Beige-Sisal-Burlap-Fabric-by-PETMAKER_83ccda3d-c763-4c60-9cf0-c0a98461ed50.21d957d2b5838acc5704b18bc84b4dec.jpeg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -763,7 +839,7 @@
                         data-price="85.90"
                         data-image="https://i5.walmartimages.com/seo/K-H-Pet-Products-Thermo-Kitty-Bed-Indoor-Heated-Cat-Bed-Sage-Tan-Small-16-Inches_dacb1c03-076d-4203-8f13-bdaf20e33693.099f64ea0ed8ac59b91bf05694a36e8b.jpeg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -784,10 +860,10 @@
 
                 <img
                     src="https://i5.walmartimages.com/seo/Interactive-Cat-Toy-Spiral-Track-Ball-Spinner-Plastic-Activity-Center-for-Kittens-and-Indoor-Play_8d2ac7b0-f56e-4770-9fbd-97bc4601143b.0ea035db1bf9641342b6cedb665a1300.jpeg"
-                    alt="Brinquedo para gato">
+                    alt="Brinquedo interativo para gato">
 
                 <span class="product-badge">
-                    Nuevo
+                    Novo
                 </span>
 
             </div>
@@ -819,7 +895,7 @@
                         data-price="13.40"
                         data-image="https://i5.walmartimages.com/seo/Interactive-Cat-Toy-Spiral-Track-Ball-Spinner-Plastic-Activity-Center-for-Kittens-and-Indoor-Play_8d2ac7b0-f56e-4770-9fbd-97bc4601143b.0ea035db1bf9641342b6cedb665a1300.jpeg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -840,7 +916,7 @@
 
                 <img
                     src="https://m.media-amazon.com/images/I/71p48B-g4dL._AC_SL1500_.jpg"
-                    alt="Fonte de água">
+                    alt="Fonte de água para gatos">
 
                 <span class="product-badge">
                     Popular
@@ -875,7 +951,7 @@
                         data-price="199.99"
                         data-image="https://m.media-amazon.com/images/I/71p48B-g4dL._AC_SL1500_.jpg">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -927,7 +1003,7 @@
                         data-price="16.50"
                         data-image="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=900&q=85">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -959,7 +1035,7 @@
                 </span>
 
                 <h3>
-                    Bola con Plumas
+                    Bola com Plumas
                 </h3>
 
                 <p>
@@ -975,11 +1051,11 @@
                     <button
                         class="add-cart"
                         data-id="12"
-                        data-name="Bola con Plumas"
+                        data-name="Bola com Plumas"
                         data-price="13.40"
                         data-image="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?auto=format&fit=crop&w=900&q=85">
 
-                        Añadir
+                        Adicionar
 
                     </button>
 
@@ -993,14 +1069,16 @@
 
 
     <p class="catalog-disclaimer">
-        * Los precios son referencias y pueden cambiar según la tienda,
-        promoción, tamaño y disponibilidad.
+
+        * Os preços são referências e podem mudar conforme
+        loja, promoção, tamanho e disponibilidade.
+
     </p>
 
 </section>
 
 
-<!-- PROMO -->
+<!-- ==================== PROMOÇÃO ==================== -->
 
 <section class="promo">
 
@@ -1011,15 +1089,15 @@
         </span>
 
         <h2>
-            Una vida más feliz empieza
-            con pequeños momentos.
+            Uma vida mais feliz começa
+            com pequenos momentos.
         </h2>
 
         <a
-            href="#productos"
+            href="#produtos"
             class="btn btn-light">
 
-            Descubrir productos
+            Descobrir produtos
 
         </a>
 
@@ -1032,7 +1110,7 @@
 </section>
 
 
-<!-- FAQ -->
+<!-- ==================== FAQ ==================== -->
 
 <section
     class="section faq-section"
@@ -1041,11 +1119,11 @@
     <div class="section-header center">
 
         <span class="section-tag">
-            AYUDA
+            AJUDA
         </span>
 
         <h2>
-            Preguntas frecuentes
+            Perguntas frequentes
         </h2>
 
     </div>
@@ -1058,7 +1136,7 @@
 
             <button class="faq-question">
 
-                ¿Cómo puedo seguir mi pedido?
+                Como posso acompanhar meu pedido?
 
                 <span>
                     +
@@ -1068,8 +1146,8 @@
 
             <div class="faq-answer">
 
-                Recibirás información de seguimiento
-                cuando el pedido sea enviado.
+                Você receberá as informações de acompanhamento
+                quando o pedido for enviado.
 
             </div>
 
@@ -1080,7 +1158,7 @@
 
             <button class="faq-question">
 
-                ¿Cuánto tarda el envío?
+                Quanto tempo demora a entrega?
 
                 <span>
                     +
@@ -1090,8 +1168,8 @@
 
             <div class="faq-answer">
 
-                El plazo depende del producto
-                y de la dirección de entrega.
+                O prazo depende do produto e do endereço
+                de entrega.
 
             </div>
 
@@ -1102,7 +1180,7 @@
 
             <button class="faq-question">
 
-                ¿Qué métodos de pago aceptan?
+                Quais formas de pagamento são aceitas?
 
                 <span>
                     +
@@ -1112,8 +1190,9 @@
 
             <div class="faq-answer">
 
-                El checkout de esta versión es una demostración.
-                Debes conectar un proveedor de pagos antes de vender.
+                O checkout desta versão é apenas uma demonstração.
+                Antes de vender, será necessário conectar um
+                provedor de pagamento.
 
             </div>
 
@@ -1124,18 +1203,18 @@
 </section>
 
 
-<!-- NEWSLETTER -->
+<!-- ==================== NEWSLETTER ==================== -->
 
 <section class="newsletter">
 
     <div>
 
         <span>
-            🐾 CLUB PATANOVA
+            🐾 CLUBE PATANOVA
         </span>
 
         <h2>
-            Recibe novedades y ofertas especiales.
+            Receba novidades e ofertas especiais.
         </h2>
 
     </div>
@@ -1146,12 +1225,13 @@
         <input
             type="email"
             id="newsletterEmail"
-            placeholder="Tu correo electrónico"
-            required
-        >
+            placeholder="Seu e-mail"
+            required>
 
         <button type="submit">
-            Suscribirme
+
+            Cadastrar
+
         </button>
 
     </form>
@@ -1161,7 +1241,7 @@
 </main>
 
 
-<!-- FOOTER -->
+<!-- ==================== RODAPÉ ==================== -->
 
 <footer>
 
@@ -1174,8 +1254,8 @@
             </h2>
 
             <p>
-                Productos seleccionados para hacer
-                más feliz la vida de perros y gatos.
+                Produtos selecionados para deixar a vida
+                de cães e gatos ainda mais feliz.
             </p>
 
         </div>
@@ -1184,15 +1264,15 @@
         <div>
 
             <h4>
-                Tienda
+                Loja
             </h4>
 
-            <a href="#productos">
-                Productos
+            <a href="#produtos">
+                Produtos
             </a>
 
             <a href="#categorias">
-                Categorías
+                Categorias
             </a>
 
         </div>
@@ -1201,15 +1281,15 @@
         <div>
 
             <h4>
-                Ayuda
+                Ajuda
             </h4>
 
             <a href="#faq">
-                Preguntas frecuentes
+                Perguntas frequentes
             </a>
 
-            <a href="#">
-                Contacto
+            <a href="#newsletter">
+                Contato
             </a>
 
         </div>
@@ -1218,7 +1298,7 @@
         <div>
 
             <h4>
-                Síguenos
+                Siga-nos
             </h4>
 
             <a href="#">
@@ -1237,14 +1317,14 @@
     <div class="footer-bottom">
 
         © 2026 PataNova.
-        Todos los derechos reservados.
+        Todos os direitos reservados.
 
     </div>
 
 </footer>
 
 
-<!-- CARRINHO -->
+<!-- ==================== CARRINHO ==================== -->
 
 <div
     class="cart-overlay"
@@ -1259,11 +1339,15 @@
     <div class="cart-header">
 
         <h2>
-            Tu carrito 🛒
+            Seu carrinho 🛒
         </h2>
 
-        <button id="closeCart">
+        <button
+            id="closeCart"
+            aria-label="Fechar carrinho">
+
             ✕
+
         </button>
 
     </div>
@@ -1278,7 +1362,7 @@
             🐾
 
             <p>
-                Tu carrito está vacío.
+                Seu carrinho está vazio.
             </p>
 
         </div>
@@ -1305,7 +1389,7 @@
             class="checkout-btn"
             id="checkoutBtn">
 
-            Ir al pago 🔒
+            Ir para o pagamento 🔒
 
         </button>
 
@@ -1322,13 +1406,13 @@
 </aside>
 
 
-<!-- TOAST -->
+<!-- ==================== AVISO ==================== -->
 
 <div
     class="toast"
     id="toast">
 
-    Producto añadido al carrito 🐾
+    Produto adicionado ao carrinho 🐾
 
 </div>
 
